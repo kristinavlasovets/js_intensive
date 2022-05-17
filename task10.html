@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 10</title>
+  </head>
+  <body>
+    <script>
+      class Сalculator {
+        constructor(x, y) {
+          if (isNaN(x) || isNaN(y)) {
+            throw new Error('Введите два валидных числа');
+          } else {
+            return (this.x = x), (this.y = y);
+          }
+        }
+
+        setX(num) {
+          if (isNaN(num)) {
+            throw new Error('Введите валидное число');
+          } else {
+            return (this.x = num);
+          }
+        }
+        setY(num) {
+          if (isNaN(num)) {
+            throw new Error('Введите валидное число');
+          } else {
+            return (this.y = num);
+          }
+        }
+        logSum() {
+          return this.x + this.y;
+        }
+        logMul() {
+          return this.x * this.y;
+        }
+        logSub() {
+          return this.x - this.y;
+        }
+        logDiv() {
+          if (this.y === 0) {
+            throw new Error('На ноль делить нельзя');
+          } else {
+            return this.x / this.y;
+          }
+        }
+      }
+
+      // let MyCalculator = new Сalculator(5, 3);
+
+      // console.log(MyCalculator.x);
+      // console.log(MyCalculator.y);
+      // MyCalculator.setX(10);
+      // console.log(MyCalculator.x);
+      // console.log(MyCalculator.logSum());
+      // console.log(MyCalculator.logMul());
+      // console.log(MyCalculator.logSub());
+      // console.log(MyCalculator.logDiv());
+    </script>
+  </body>
+</html>
